@@ -1,44 +1,46 @@
 import './App.css';
-import Navbar from './components/inc/Navbar';
 import Book from './components/pages/Booking';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Head from './components/Headline';
 import Body from './components/Body';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {Redirect, Route, Switch} from 'react-router-dom';
+import React from 'react';
+import Headline from './components/Headline';
+import Layout from './components/HOC';
+import SignUp from './components/pages/Signup';
 
 function App() {
   return (   
-    <Router>  
 
-     
-        <Switch> 
-          <Route path="/booking" exact component={Book} />
-        </Switch>
+    
+      <Switch> 
 
-       
-        
-    </Router>
+        <Route path="/booking" exact component={() => (
+          <Layout>
+            <Book/>
+          </Layout>
+        )} />
+        <Route path="/home" exact component={() => (
+          <React.Fragment>
+            <Layout>
+              <Headline/>
+              <Header/>
+              <Body/>
+              <Footer/>
+            </Layout>
+
+          </React.Fragment>
+        )} />
+
+        <Route path="/signup" exact component={SignUp} />
+
+        <Route path="/" exact>
+          <Redirect to="/home"/>
+        </Route>
+      </Switch>
   );
 }
 
 export default App;
-
-{/* <Router>  
-
-<div className="App"> 
-  <Navbar />
-
-  <Switch> 
-    <Route path="/booking" exact component={Book} />
-  </Switch>
-
-  <Head />
-  <Header />
-  <Body />
-  <Footer />
-</div>
-  
-</Router> */}
