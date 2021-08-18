@@ -1,33 +1,37 @@
-import React from 'react'
-import styled from 'styled-components'
-import {MdMyLocation} from 'react-icons/md'
-import {FaAngleDown} from 'react-icons/fa'
+import React from "react";
+import styled from "styled-components";
+import { MdMyLocation } from "react-icons/md";
+import { FaAngleDown } from "react-icons/fa";
 
 function Headline() {
-    return (
-        <div>
-        <div className="container mt-4">
-        <div className="row">
-          <h className="d-flex justify-content-center">Search and look appointment</h>
-          <div className="col-4">
+  return (
+    <section style={{ backgroundColor: "#095A99" }}>
+      <div className="container">
+        <div className="row text-center text-light">
+          <div className="col-12">Search and look appointment</div>
+        </div>
+        <div className="row text-center mt-4">
+          <div className="col-4 text-light">
             Locations
             <MdMyLocation className="" color="lightblue" size="1rem" />
           </div>
-          <div className="col-4">
+          <div className="col-4 text-light">
             Select Specialities
-            <FaAngleDown className=""  size="1rem" />
+            <FaAngleDown className="" size="1rem" />
           </div>
-          <div className="col-4">
+          <div className="col-4 text-light">
             Select Insurance
             <FaAngleDown size="1rem" />
           </div>
         </div>
-
-        <button type="button" className="btn btn-dark">Search</button>
-    </div>
-    </div>
-        
-    )
+        <div class="d-grid gap-2 col-4 mx-auto mt-4">
+          <button class="btn btn-dark" type="button">
+            Search
+          </button>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default Headline;
