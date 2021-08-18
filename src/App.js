@@ -19,10 +19,10 @@ function App() {
         path="/booking"
         exact
         component={() => (
-          <Layout>
+          <>
             <Book />
             <Bottom />
-          </Layout>
+          </>
         )}
       />
       <Route

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function footer() {
   return (
-    <section className="section bg-light pt-4 ">
+    <section className="section bg-light pt-4 mt-5 ">
       <div className="container">
         <div className="row">
           <div className="col-2">
