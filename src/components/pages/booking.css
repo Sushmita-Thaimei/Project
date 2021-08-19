@@ -6,3 +6,12 @@
   border-right: none;
   border: bottom style 2px;
 }
+
+.title-color {
+  color: "#7D72B5";
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
