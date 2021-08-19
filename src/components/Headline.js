@@ -10,16 +10,16 @@ function Headline() {
         <div className="row text-center text-light">
           <div className="col-12">Search and look appointment</div>
         </div>
-        <div className="row text-center mt-4">
-          <div className="col-4 text-light">
+        <div className="row text-center mt-4 bg-light">
+          <div className="col-4">
             Locations
             <MdMyLocation className="" color="lightblue" size="1rem" />
           </div>
-          <div className="col-4 text-light">
+          <div className="col-4">
             Select Specialities
             <FaAngleDown className="" size="1rem" />
           </div>
-          <div className="col-4 text-light">
+          <div className="col-4">
             Select Insurance
             <FaAngleDown size="1rem" />
           </div>
@@ -29,6 +29,7 @@ function Headline() {
             Search
           </button>
         </div>
+        <br />
       </div>
     </section>
   );

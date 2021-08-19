@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import searchLogo from "./images/searchLogo.png";
 import clickLogo from "./images/clickLogo.jpg";
 import bookLogo from "./images/bookLogo.png";

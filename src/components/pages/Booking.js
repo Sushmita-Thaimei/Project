@@ -17,10 +17,17 @@ const Booking = (props) => {
           Back to my result
         </button>
       </nav>
-      <div class="container px-4 text-left">
-        <div class="row gx-5">
-          <div class="col-6">
-            <div class="p-3 border bg-light">Custom column padding</div>
+      <div className="container px-4 text-left">
+        <div className="row gx-5">
+          <div className="col-6">
+            <div className="p-3 border bg-light">
+              Custom column padding
+              <footer>
+                <div className="row">
+                  <div className="col">dfghjk</div>
+                </div>
+              </footer>
+            </div>
           </div>
           <div class="col-6">
             <div className="p-3 border bg-light">

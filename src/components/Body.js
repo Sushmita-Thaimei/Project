@@ -25,13 +25,22 @@ function Body() {
           </div>
         </div>
         <br />
-        <div className="row d-flex justify-content-center">
-          <div className="col-6 d-flex justify-content-left">
+        <div className="row d-flex justify-content-right">
+          <div className="col-6 ">
             <img src={img2} height={400} width={500} />
           </div>
-          <div className="col-6 d-flex justify-content-center"></div>
+          <div className="col-6 d-flex justify-content-center">
+            <p>
+              To save our community with passion and profesionalism.
+              <br />
+              Vision to be a leading world class,
+              <br />
+              integrated and comprehensive healthcare provider.
+            </p>
+          </div>
         </div>
       </div>
+      <br />
     </section>
   );
 }

@@ -10,7 +10,7 @@ function Footer() {
           <div className="row d-flex justify-content-center">
             {/* Column 1 */}
             <div className="col-md-2 col-sm-6">
-              <h4>DENTAL CARE</h4>
+              <h6>DOCAPP</h6>
               <ul className="list-unstyled">
                 <li>About Us</li>
                 <li>Contact Us</li>
@@ -18,7 +18,7 @@ function Footer() {
             </div>
             {/* Column 2 */}
             <div className="col-md-2 col-sm-6">
-              <h4>SPECIALITIES</h4>
+              <h6>SPECIALITIES</h6>
               <ul className="list-unstyled">
                 <li>Prosthodontics</li>
                 <li>Periodontics</li>
@@ -53,14 +53,16 @@ function Footer() {
                 </li>
                 <br />
                 <li>Contact Us</li>
+                <Link className="text-light">customercare@docapp.com</Link>
               </ul>
             </div>
           </div>
           {/* Footer Bottom */}
           <div className="footer-bottom">
             <p className="text-xs-center">
-              &copy;{new Date().getFullYear()} City Guide App - All Rights
-              Reserved
+              &copy;{new Date().getFullYear()}DOCAPP |{" "}
+              <Link className="text-light">Terms of Use |</Link>
+              <Link className="text-light">Privacy Policy </Link>
             </p>
           </div>
         </div>
