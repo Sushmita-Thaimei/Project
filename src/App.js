@@ -31,8 +31,8 @@ function App() {
         component={() => (
           <React.Fragment>
             <Layout>
-              <Headline />
               <Header />
+              <Headline />
               <Body />
               <Footer />
             </Layout>

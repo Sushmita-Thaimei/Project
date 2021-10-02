@@ -4,43 +4,53 @@ import img2 from "./images/pic3.jpg";
 
 function Body() {
   return (
-    <section className="mt-4">
-      <div className="container">
+    <section className="section">
+      <h4 className="text-center text-primary mt-4">
+        HOW TO BOOK YOUR APPOINTMENT
+      </h4>
+      {/* FIRST */}
+      <div className="container mt-4">
         <div className="row">
-          <div className="col-md-12 mb-4 text-center">
-            <h4 className="main-heading text-center">
-              AFFORDABLE FULL CHECKUPS
-            </h4>
+          <div className="col">
+            <div className="row mb-3">
+              <div className="col-8">
+                <i className="d-flex justify-content-start">
+                  <img src={img1} height={400} width={600} />
+                </i>
+              </div>
+              <div className="col-md-4">
+                <h4 className="text-primary">DENTAL CARE</h4>
+                <p>
+                  To serve our community with passion <br />
+                  and profession. Vision to be <br /> a leading world class,
+                  integrated and <br />
+                  comprehension healthcare provider.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="col-md-6 text-center">
-            <img src={img1} height={400} width={600} />
-          </div>
-          <div className="col-md-6 mt-4 text-center text-dark">
-            <p>
-              To serve our community with passion <br />
-              and profession. Vision to be <br /> a leading world class,
-              integrated and <br />
-              comprehension healthcare provider.
-            </p>
-          </div>
-        </div>
-        <br />
-        <div className="row d-flex justify-content-right">
-          <div className="col-6 ">
-            <img src={img2} height={400} width={500} />
-          </div>
-          <div className="col-6 d-flex justify-content-center">
-            <p>
-              To save our community with passion and profesionalism.
-              <br />
-              Vision to be a leading world class,
-              <br />
-              integrated and comprehensive healthcare provider.
-            </p>
+          {/* SECOND */}
+          <div className="col mb-3">
+            <div className="row">
+              <div className="col-md-4">
+                <h4 className="text-primary">EYE CARE</h4>
+                <p>
+                  To save our community with passion and profesionalism.
+                  <br />
+                  Vision to be a leading world class,
+                  <br />
+                  integrated and comprehensive healthcare provider.
+                </p>
+              </div>
+              <div className="col-8">
+                <i className="d-flex justify-content-start">
+                  <img src={img2} height={300} width={600} />
+                </i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <br />
     </section>
   );
 }

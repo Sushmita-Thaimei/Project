@@ -1,6 +1,7 @@
 import React from "react";
 import { FaStethoscope } from "react-icons/fa";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
+
 const Navbar = () => {
   const history = useHistory();
 
@@ -23,7 +24,7 @@ const Navbar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-primary">
-        <div className="container-fluid">
+        <div className="container">
           <span
             style={{ cursor: "pointer" }}
             className="navbar-brand text-light"
@@ -33,7 +34,7 @@ const Navbar = () => {
             CAPP
           </span>
           <button
-            className="navbar-toggler"
+            className="navbar-toggler bg-dark"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -56,7 +57,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link text-light" href="#">
-                  ABOUT
+                  About
                 </a>
               </li>
               <li className="nav-item">

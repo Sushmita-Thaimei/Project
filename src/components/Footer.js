@@ -60,9 +60,8 @@ function Footer() {
           {/* Footer Bottom */}
           <div className="footer-bottom">
             <p className="text-xs-center">
-              &copy;{new Date().getFullYear()}DOCAPP |{" "}
-              <Link className="text-light">Terms of Use |</Link>
-              <Link className="text-light">Privacy Policy </Link>
+              &copy;{new Date().getFullYear()}DOCAPP | Terms of Use | Privacy
+              Policy
             </p>
           </div>
         </div>

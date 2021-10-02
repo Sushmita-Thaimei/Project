@@ -1,38 +1,70 @@
 import React from "react";
-import styled from "styled-components";
-import { MdMyLocation } from "react-icons/md";
-import { FaAngleDown } from "react-icons/fa";
+import searchLogo from "./images/searchLogo.png";
+import clickLogo from "./images/clickLogo.jpg";
+import bookLogo from "./images/bookLogo.png";
 
 function Headline() {
   return (
-    <section style={{ backgroundColor: "#095A99" }}>
-      <div className="container">
-        <div className="row text-center text-light">
-          <div className="col-12">Search and look appointment</div>
-        </div>
-        <div className="row text-center mt-4 bg-light">
-          <div className="col-4">
-            Locations
-            <MdMyLocation className="" color="lightblue" size="1rem" />
+    <section className="section bg-light">
+      <h4 className="text-center mt-4 text-primary">
+        HOW TO BOOK YOUR APPOINTMENT
+      </h4>
+      {/* FIRST */}
+      <div className="container-md mt-4">
+        <div className="row">
+          <div className="col">
+            <div className="row mb-3">
+              <div className="col-md-2">
+                <i className="d-flex justify-content-start">
+                  <img src={searchLogo} height={40} width={40} />
+                </i>
+              </div>
+              <div className="col-md-10">
+                <p style={{ fontSize: "15px" }} class="m-0 p-0 fw-bold">
+                  Search <br />
+                </p>
+                By Location, Specialities, Insurance, <br />
+                Doctors, Clinics, Hospital etc..
+              </div>
+            </div>
           </div>
-          <div className="col-4">
-            Select Specialities
-            <FaAngleDown className="" size="1rem" />
+          {/* SECOND */}
+          <div className="col">
+            <div className="row">
+              <div className="col-md-2">
+                <i className="d-flex justify-content-start">
+                  <img src={clickLogo} height={40} width={40} />
+                </i>
+              </div>
+              <div className="col-md-10">
+                <p style={{ fontSize: "15px" }} class="m-0 p-0 fw-bold">
+                  Select <br />
+                </p>
+                Select based on Reviews, Nationality, <br />
+                Doctors, Clinics, Hospital etc..
+              </div>
+            </div>
           </div>
-          <div className="col-4">
-            Select Insurance
-            <FaAngleDown size="1rem" />
+          {/* THIRD */}
+          <div className="col">
+            <div className="row">
+              <div className="col-md-2">
+                <i className="d-flex justify-content-start">
+                  <img src={bookLogo} height={40} width={40} />
+                </i>
+              </div>
+              <div className="col-md-10">
+                <p style={{ fontSize: "15px" }} class="m-0 p-0 fw-bold">
+                  Book <br />
+                </p>
+                Book your appointment and pay at the <br />
+                Clinic/Hospital
+              </div>
+            </div>
           </div>
         </div>
-        <div class="d-grid gap-2 col-4 mx-auto mt-4">
-          <button class="btn btn-dark" type="button">
-            Search
-          </button>
-        </div>
-        <br />
       </div>
     </section>
   );
 }
-
 export default Headline;

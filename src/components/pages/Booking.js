@@ -1,8 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { MdKeyboardArrowLeft } from "react-icons/md";
-import { Link } from "react-router-dom";
-import "../pages/booking.css";
+import RightForm from "./Rightform";
+import image from "../images/doctor.webp";
 
 const Booking = (props) => {
   const history = useHistory();
@@ -11,11 +11,16 @@ const Booking = (props) => {
   };
   return (
     <div>
-      <nav>
-        <button onClick={() => handleClick()}>
-          <MdKeyboardArrowLeft color="black" size="2rem" />
-          Back to my result
-        </button>
+      <nav style={{ padding: "8px" }}>
+        <span
+          style={{
+            cursor: "pointer",
+          }}
+          onClick={() => handleClick()}
+        >
+          <MdKeyboardArrowLeft color="white" size="2rem" />
+          <span style={{ color: "white" }}>Back to my result</span>
+        </span>
       </nav>
       <div class="container px-4 text-left">
         <div class="row gx-5 mt-5">
@@ -28,7 +33,7 @@ const Booking = (props) => {
                   {/* PHOTO */}
                   <div class="col-md-6 ">
                     <img
-                      src="https://cdn.pixabay.com/photo/2017/05/23/17/12/doctor-2337835_960_720.jpg"
+                      src={image}
                       style={{
                         borderRadius: "100%",
                         height: "180px",
@@ -40,7 +45,7 @@ const Booking = (props) => {
                   <div class="col">
                     {/* NAME AND EXP */}
                     <div class="row m-0 p-0">
-                      <p class="m-0 p-0 fw-bold fs-6">
+                      <p class="m-0 mt-3 p-0 fw-bold fs-6">
                         Dr. Muhammed Abdul Raouf
                       </p>
                       <p style={{ fontSize: "12px" }} class="m-0 p-0">
@@ -57,7 +62,7 @@ const Booking = (props) => {
                         <div class="col-2 m-0 p-0">
                           <i
                             class="fa fa-university"
-                            style={{ fontSize: "20px", color: "#652295" }}
+                            style={{ fontSize: "20px", color: "#095A99" }}
                           ></i>
                         </div>
                         <div class="col-10 m-0 p-0">
@@ -78,7 +83,7 @@ const Booking = (props) => {
                         <div class="col-2 m-0 p-0">
                           <i
                             class="fa fa-envelope"
-                            style={{ fontSize: "20px", color: "#652295" }}
+                            style={{ fontSize: "20px", color: "#095A99" }}
                           ></i>
                         </div>
                         <div class="col-10 m-0 p-0">
@@ -99,7 +104,7 @@ const Booking = (props) => {
                         <div class="col-2 m-0 p-0">
                           <i
                             class="fa fa-phone"
-                            style={{ fontSize: "20px", color: "#652295" }}
+                            style={{ fontSize: "20px", color: "#095A99" }}
                           ></i>
                         </div>
                         <div class="col-10 m-0 p-0">
@@ -129,7 +134,7 @@ const Booking = (props) => {
                         <div class="col-4">
                           <i
                             class="fa fa-calendar"
-                            style={{ fontSize: "25px", color: "#652295" }}
+                            style={{ fontSize: "25px", color: "#095A99" }}
                           ></i>
                         </div>
                         <div class="col-8">
@@ -152,7 +157,7 @@ const Booking = (props) => {
                         <div class="col-4">
                           <i
                             class="fa fa-newspaper"
-                            style={{ fontSize: "25px", color: "#652295" }}
+                            style={{ fontSize: "25px", color: "#095A99" }}
                           ></i>
                         </div>
                         <div class="col-8">
@@ -175,7 +180,7 @@ const Booking = (props) => {
           </div>
 
           {/* RIGHT SIDE */}
-          <RightForm />
+          <RightForm title="Confirm your appointment" />
         </div>
       </div>
     </div>
@@ -183,68 +188,3 @@ const Booking = (props) => {
 };
 
 export default Booking;
-
-const RightForm = () => {
-  return (
-    <div class="col-6 shadow rounded-3 ">
-      <div className="p-3">
-        <form>
-          <h3 style={{ color: "#652295", fontWeight: "bold" }}>
-            Confirm your Appointment
-          </h3>
-          <div>
-            <label>
-              <span style={{ fontWeight: "bold" }}>Existing User? </span>
-              <Link className="text-primary">LOGIN</Link>
-            </label>
-          </div>
-
-          {/* PATIENT/VISITOR NAME */}
-          <div class="mt-3">
-            <label style={{ fontWeight: "bold" }} for="patientName">
-              Patient / Visitor's Name
-            </label>
-            <input type="text" class="form-control" id="patientName" />
-          </div>
-
-          {/* EMAIL ID */}
-          <div class="mt-3">
-            <label style={{ fontWeight: "bold" }} for="emailId">
-              Email ID
-            </label>
-            <input type="email" class="form-control" id="emailId" />
-          </div>
-
-          {/* MOBILE NUMBER */}
-          <div class="mt-3">
-            <label style={{ fontWeight: "bold" }} for="mobileNumber">
-              Mobile Number
-            </label>
-            <input type="number" class="form-control" id="mobileNumber" />
-
-            <small id="emailHelp" class="form-text text-muted">
-              You will receive an SMS with a verification code on this number.
-            </small>
-          </div>
-
-          {/* CHECKBOX */}
-          <div class="form-check mt-3">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
-            <label class="form-check-label" for="flexCheckDefault">
-              By booking this appointment,you agree to DOCAPP Terms & Conditions
-            </label>
-          </div>
-
-          <button class="btn btn-primary mt-2 " type="submit">
-            SUBMIT
-          </button>
-        </form>
-      </div>
-    </div>
-  );
-};
